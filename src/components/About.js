@@ -11,10 +11,6 @@ export default function About() {
               alt="Hidrolik Mühendisliği" 
               className="about-img"
             />
-            <div className="experience-badge glass-panel">
-              <span className="years">25+</span>
-              <span className="text">Yıllık<br/>Tecrübe</span>
-            </div>
           </div>
         </div>
         
