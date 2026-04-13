@@ -5,12 +5,12 @@ export default function Footer() {
     <footer className="footer section-padding pb-0" style={{ backgroundColor: 'rgba(6, 11, 20, 0.9)', borderTop: '1px solid var(--glass-border)', paddingBottom: 0 }}>
       <div className="container grid grid-cols-3" style={{ marginBottom: '3rem' }}>
         <div className="footer-col">
-          <div className="logo mb-4">
-            <span className="outfit-font font-bold text-2xl gradient-text" style={{ fontSize: '1.8rem', fontWeight: 800 }}>HIDROTEK</span>
-            <span className="text-sm font-light tracking-widest block" style={{color: 'var(--accent-color)', fontSize: '0.7rem', letterSpacing: '0.1em'}}>INDUSTRIES</span>
+          <div className="logo mb-4" style={{ backgroundColor: 'white', padding: '0.5rem', borderRadius: '8px', display: 'inline-block' }}>
+            <img src="/logo.jpeg" alt="GNC Hidrolik Logo" style={{ height: '60px', width: 'auto' }} />
           </div>
           <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: '1.8' }}>
-            Türkiye'nin lider hidrolik sistemleri üreticisi. Yüsek teknoloji, kaliteli üretim ve müşteri memnuniyeti.
+            GNC HİDROLİK PNÖMATİK OTOMASYON SİS. SAN. TİC. LTD. ŞTİ. <br/>
+            Yüksek teknoloji, kaliteli üretim ve müşteri memnuniyeti.
           </p>
           <div className="social-links">
             <a href="#">in</a>
@@ -42,8 +42,8 @@ export default function Footer() {
       </div>
       
       <div className="footer-bottom">
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', padding: '1.5rem 2rem', borderTop: '1px solid rgba(255,255,255,0.05)', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-          <p>&copy; {new Date().getFullYear()} Hidrotek Industries. Tüm Hakları Saklıdır.</p>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', padding: '1.5rem 2rem', borderTop: '1px solid rgba(255,255,255,0.05)', color: 'var(--text-secondary)', fontSize: '0.9rem', flexWrap: 'wrap', gap: '1rem' }}>
+          <p>&copy; {new Date().getFullYear()} GNC Hidrolik Pnömatik Otomasyon. Tüm Hakları Saklıdır.</p>
           <p>Tasarım & Geliştirme: Antigravity Labs</p>
         </div>
       </div>

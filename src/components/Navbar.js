@@ -18,8 +18,7 @@ export default function Navbar() {
       <div className="container nav-container">
         <div className="logo cursor-pointer">
           <Link href="/">
-            <span className="outfit-font font-bold text-2xl gradient-text">HIDROTEK</span>
-            <span className="text-sm font-light tracking-widest block" style={{color: 'var(--accent-color)'}}>INDUSTRIES</span>
+            <img src="/logo.jpeg" alt="GNC Hidrolik Logo" style={{ height: '50px', width: 'auto', borderRadius: '4px' }} />
           </Link>
         </div>
         <div className="nav-links">

@@ -16,21 +16,21 @@ export default function Contact() {
               <div className="icon">📍</div>
               <div>
                 <h4>Konum</h4>
-                <p>Organize Sanayi Bölgesi, 3. Cad. No:14<br/>Nilüfer / Bursa</p>
+                <p>İnönü mah. Arifoğlu cad. No: 3/A<br/>Gebze / Kocaeli</p>
               </div>
             </div>
             <div className="glass-panel info-card">
               <div className="icon">📞</div>
               <div>
                 <h4>Telefon</h4>
-                <p>+90 (224) 444 12 34<br/>+90 (532) 123 45 67 (7/24 Servis)</p>
+                <p>0538 885 2766<br/>(7/24 Teknik Servis)</p>
               </div>
             </div>
             <div className="glass-panel info-card">
               <div className="icon">✉️</div>
               <div>
                 <h4>E-Posta</h4>
-                <p>info@hidrotek-industries.com<br/>satis@hidrotek-industries.com</p>
+                <p>info@gnchidrolik.com</p>
               </div>
             </div>
           </div>
