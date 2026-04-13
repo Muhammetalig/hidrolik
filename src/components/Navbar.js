@@ -1,0 +1,104 @@
+"use client";
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="container nav-container">
+        <div className="logo cursor-pointer">
+          <Link href="/">
+            <span className="outfit-font font-bold text-2xl gradient-text">HIDROTEK</span>
+            <span className="text-sm font-light tracking-widest block" style={{color: 'var(--accent-color)'}}>INDUSTRIES</span>
+          </Link>
+        </div>
+        <div className="nav-links">
+          <Link href="#hakkimizda">Hakkımızda</Link>
+          <Link href="#hizmetler">Hizmetlerimiz</Link>
+          <Link href="#iletisim">İletişim</Link>
+        </div>
+        <div className="nav-action">
+          <Link href="#iletisim">
+            <button className="primary-btn" style={{padding: '10px 24px', fontSize: '0.9rem'}}>Teklif Al</button>
+          </Link>
+        </div>
+      </div>
+      <style jsx>{`
+        .navbar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: var(--nav-height);
+          display: flex;
+          align-items: center;
+          z-index: 100;
+          transition: all 0.3s ease;
+          background: transparent;
+        }
+        .navbar.scrolled {
+          background: rgba(6, 11, 20, 0.9);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          border-bottom: 1px solid var(--glass-border);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+          height: 70px;
+        }
+        .nav-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .logo {
+          display: flex;
+          flex-direction: column;
+          line-height: 1.1;
+        }
+        .font-bold { font-weight: 800; }
+        .text-2xl { font-size: 1.8rem; }
+        .text-sm { font-size: 0.7rem; }
+        .tracking-widest { letter-spacing: 0.1em; }
+        .nav-links {
+          display: flex;
+          gap: 2rem;
+        }
+        .nav-links a {
+          font-weight: 500;
+          font-size: 0.95rem;
+          color: var(--text-primary);
+          position: relative;
+        }
+        .nav-links a::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: var(--primary-color);
+          transition: width 0.3s ease;
+        }
+        .nav-links a:hover {
+          color: var(--primary-color);
+        }
+        .nav-links a:hover::after {
+          width: 100%;
+        }
+        @media (max-width: 768px) {
+          .nav-links { display: none; }
+          .nav-action { display: none; }
+        }
+      `}</style>
+    </nav>
+  );
+}
