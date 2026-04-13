@@ -17,23 +17,6 @@ export default function Hero() {
           <a href="#hizmetler" className="primary-btn">Hizmetlerimizi Keşfedin</a>
           <a href="#iletisim" className="secondary-btn">Bize Ulaşın</a>
         </div>
-        
-        <div className="hero-stats animate-fade-in-up delay-3 glass-panel">
-          <div className="stat-item">
-            <h3>25+</h3>
-            <p>Yıllık Tecrübe</p>
-          </div>
-          <div className="stat-divider"></div>
-          <div className="stat-item">
-            <h3>500+</h3>
-            <p>Tamamlanan Proje</p>
-          </div>
-          <div className="stat-divider"></div>
-          <div className="stat-item">
-            <h3>10M+</h3>
-            <p>Üretilen Parça</p>
-          </div>
-        </div>
       </div>
 
       <style jsx>{`
