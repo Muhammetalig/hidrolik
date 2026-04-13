@@ -36,27 +36,19 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="contact-form animate-fade-in-up delay-2 glass-panel">
-          <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem' }}>İletişim Formu</h3>
-          <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} onSubmit={(e) => e.preventDefault()}>
-            <div className="form-group">
-              <label>Adınız Soyadınız</label>
-              <input type="text" placeholder="John Doe" />
-            </div>
-            <div className="form-group">
-              <label>E-Posta Adresi</label>
-              <input type="email" placeholder="john@company.com" />
-            </div>
-            <div className="form-group">
-              <label>Konu</label>
-              <input type="text" placeholder="Teklif Talebi" />
-            </div>
-            <div className="form-group">
-              <label>Mesajınız</label>
-              <textarea placeholder="Size nasıl yardımcı olabiliriz?" rows="5"></textarea>
-            </div>
-            <button className="primary-btn" style={{ marginTop: '1rem' }}>Mesaj Gönder</button>
-          </form>
+        <div className="contact-whatsapp animate-fade-in-up delay-2 glass-panel" style={{ padding: '3rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+          <div style={{ backgroundColor: 'rgba(37, 211, 102, 0.1)', width: '80px', height: '80px', borderRadius: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '1.5rem', border: '1px solid rgba(37, 211, 102, 0.2)' }}>
+            <span style={{ fontSize: '3rem' }}>💬</span>
+          </div>
+          <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>Hızlı İletişim</h3>
+          <p style={{ color: 'var(--text-secondary)', marginBottom: '2.5rem', fontSize: '1.05rem', maxWidth: '350px' }}>
+            Soru, görüş ve teklif talepleriniz için WhatsApp üzerinden satış ve destek ekibimizle anında mesajlaşabilirsiniz.
+          </p>
+          <a href="https://wa.me/905388852766?text=Merhaba,%20web%20sitenizden%20ulaşıyorum.%20Bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">
+            <button className="primary-btn" style={{ display: 'flex', alignItems: 'center', gap: '10px', background: 'linear-gradient(135deg, #128C7E, #25D366)', boxShadow: '0 4px 15px rgba(37, 211, 102, 0.3)' }}>
+              WhatsApp'tan Ulaşın
+            </button>
+          </a>
         </div>
       </div>
 
