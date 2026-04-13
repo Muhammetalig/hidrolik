@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="container nav-container">
         <div className="logo cursor-pointer">
           <Link href="/">
-            <img src="/logo.jpeg" alt="GNC Hidrolik Logo" style={{ height: '50px', width: 'auto', borderRadius: '4px' }} />
+            <img src="/logo.png" alt="GNC Hidrolik Logo" style={{ height: '80px', width: 'auto' }} />
           </Link>
         </div>
         <div className="nav-links">
