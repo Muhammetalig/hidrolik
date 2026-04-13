@@ -12,12 +12,6 @@ export default function Footer() {
             GNC HİDROLİK PNÖMATİK OTOMASYON SİS. SAN. TİC. LTD. ŞTİ. <br/>
             Yüksek teknoloji, kaliteli üretim ve müşteri memnuniyeti.
           </p>
-          <div className="social-links">
-            <a href="#">in</a>
-            <a href="#">f</a>
-            <a href="#">ig</a>
-            <a href="#">x</a>
-          </div>
         </div>
         
         <div className="footer-col" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -44,7 +38,6 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', padding: '1.5rem 2rem', borderTop: '1px solid rgba(255,255,255,0.05)', color: 'var(--text-secondary)', fontSize: '0.9rem', flexWrap: 'wrap', gap: '1rem' }}>
           <p>&copy; {new Date().getFullYear()} GNC Hidrolik Pnömatik Otomasyon. Tüm Hakları Saklıdır.</p>
-          <p>Tasarım & Geliştirme: Antigravity Labs</p>
         </div>
       </div>
 
