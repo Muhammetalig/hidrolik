@@ -5,8 +5,8 @@ export default function Footer() {
     <footer className="footer section-padding pb-0" style={{ backgroundColor: 'rgba(6, 11, 20, 0.9)', borderTop: '1px solid var(--glass-border)', paddingBottom: 0 }}>
       <div className="container grid grid-cols-3" style={{ marginBottom: '3rem' }}>
         <div className="footer-col">
-          <div className="logo mb-4" style={{ display: 'inline-block' }}>
-            <img src="/logo.png" alt="GNC Hidrolik Logo" style={{ height: '90px', width: 'auto' }} />
+          <div className="logo mb-4" style={{ display: 'inline-block', backgroundColor: 'white', padding: '12px 20px', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
+            <img src="/logo.png" alt="GNC Hidrolik Logo" style={{ height: '75px', width: 'auto', display: 'block' }} />
           </div>
           <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: '1.8' }}>
             GNC HİDROLİK PNÖMATİK OTOMASYON SİS. SAN. TİC. LTD. ŞTİ. <br/>

@@ -17,8 +17,8 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <div className="logo cursor-pointer">
-          <Link href="/">
-            <img src="/logo.png" alt="GNC Hidrolik Logo" style={{ height: '80px', width: 'auto' }} />
+          <Link href="/" style={{ display: 'inline-block', backgroundColor: 'white', padding: '8px 16px', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.2)' }}>
+            <img src="/logo.png" alt="GNC Hidrolik Logo" style={{ height: '65px', width: 'auto', display: 'block' }} />
           </Link>
         </div>
         <div className="nav-links">
