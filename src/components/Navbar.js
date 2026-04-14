@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="container nav-container">
         <div className="logo-container">
           <Link href="/">
-            <img src="/logo.png" alt="GNC Hidrolik Logo" className="logo-img" />
+            <img src="/logo.jpeg" alt="GNC Hidrolik Logo" className="logo-img" />
           </Link>
         </div>
         <div className="nav-links">
@@ -61,18 +61,14 @@ export default function Navbar() {
         .logo-container {
           display: flex;
           align-items: center;
-          background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
-          padding: 10px;
-          border-radius: 50%;
         }
         .logo-img {
           height: 80px;
           width: auto;
-          filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+          border-radius: 8px;
           transition: all 0.3s ease;
         }
         .logo-img:hover {
-          filter: drop-shadow(0 0 1px rgba(255, 255, 255, 1)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
           transform: scale(1.05);
         }
         .nav-links {

@@ -5,14 +5,14 @@ export default function Footer() {
     <footer className="footer section-padding pb-0" style={{ backgroundColor: 'rgba(6, 11, 20, 0.9)', borderTop: '1px solid var(--glass-border)', paddingBottom: 0 }}>
       <div className="container grid grid-cols-3" style={{ marginBottom: '3rem' }}>
         <div className="footer-col">
-          <div className="logo-container mb-4" style={{ display: 'inline-block', background: 'radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%)', padding: '10px', borderRadius: '50%' }}>
+          <div className="logo-container mb-4" style={{ display: 'inline-block' }}>
             <img 
-              src="/logo.png" 
+              src="/logo.jpeg" 
               alt="GNC Hidrolik Logo" 
               style={{ 
                 height: '90px', 
-                width: 'auto', 
-                filter: 'drop-shadow(0 0 1px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))'
+                width: 'auto',
+                borderRadius: '8px'
               }} 
             />
           </div>
