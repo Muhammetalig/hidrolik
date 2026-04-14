@@ -35,7 +35,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="hizmetler" className="section-padding" style={{ backgroundColor: 'var(--bg-card)' }}>
+    <section id="hizmetler" className="section-padding" style={{ backgroundColor: 'var(--bg-card)', paddingBottom: 0 }}>
       <div className="container">
         <h2 className="section-title animate-fade-in-up">Çözüm ve Hizmetlerimiz</h2>
         <p className="section-subtitle animate-fade-in-up delay-1">
@@ -51,6 +51,24 @@ export default function Services() {
               <a href="#iletisim" className="learn-more">Teklif İste →</a>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Showcase Banner with Hidrolik Image */}
+      <div className="services-showcase">
+        <div className="showcase-overlay"></div>
+        <div className="container showcase-content">
+          <div className="showcase-stats">
+            <div className="showcase-stat">
+              <h3>7/24</h3>
+              <p>Teknik Destek</p>
+            </div>
+            <div className="showcase-divider"></div>
+            <div className="showcase-stat">
+              <h3>%100</h3>
+              <p>Müşteri Memnuniyeti</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -102,6 +120,93 @@ export default function Services() {
         }
         .learn-more:hover::after {
           width: 100%;
+        }
+
+        /* Showcase Banner */
+        .services-showcase {
+          position: relative;
+          margin-top: 5rem;
+          height: 350px;
+          background: url('/workshop-hidrolik.jpg') center/cover no-repeat;
+          background-attachment: scroll;
+          overflow: hidden;
+        }
+        .showcase-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            135deg,
+            rgba(6, 11, 20, 0.88) 0%,
+            rgba(6, 11, 20, 0.65) 50%,
+            rgba(6, 11, 20, 0.88) 100%
+          );
+          z-index: 1;
+        }
+        .showcase-content {
+          position: relative;
+          z-index: 2;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .showcase-stats {
+          display: flex;
+          align-items: center;
+          gap: 3rem;
+          padding: 2rem 4rem;
+          background: rgba(255, 255, 255, 0.04);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 20px;
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+        }
+        .showcase-stat {
+          text-align: center;
+        }
+        .showcase-stat h3 {
+          font-size: 2.8rem;
+          font-family: 'Outfit', sans-serif;
+          font-weight: 800;
+          color: var(--primary-color);
+          line-height: 1;
+          margin-bottom: 0.4rem;
+        }
+        .showcase-stat p {
+          color: var(--text-secondary);
+          font-size: 0.95rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          font-weight: 500;
+        }
+        .showcase-divider {
+          width: 1px;
+          height: 50px;
+          background: rgba(255, 255, 255, 0.12);
+        }
+        @media (max-width: 968px) {
+          .services-showcase {
+            height: auto;
+            padding: 3rem 0;
+          }
+          .showcase-stats {
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 2rem;
+            justify-content: center;
+          }
+          .showcase-divider {
+            display: none;
+          }
+          .showcase-stat {
+            min-width: 120px;
+          }
+        }
+        @media (max-width: 640px) {
+          .showcase-stats {
+            flex-direction: column;
+            gap: 1.5rem;
+          }
         }
       `}</style>
     </section>

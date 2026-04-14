@@ -26,7 +26,7 @@ export default function Hero() {
           display: flex;
           align-items: center;
           padding-top: var(--nav-height);
-          background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+          background: url('/workshop-cnc.jpg') center/cover no-repeat;
         }
         .hero-overlay {
           position: absolute;

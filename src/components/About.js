@@ -1,16 +1,31 @@
 "use client";
 
 export default function About() {
+  const images = [
+    { src: "/workshop-bakim.jpg", alt: "Hidrolik Bakım" },
+    { src: "/workshop-cnc.jpg", alt: "CNC İşleme" },
+    { src: "/workshop-hidrolik.jpg", alt: "Hidrolik Sistemler" }
+  ];
+
   return (
     <section id="hakkimizda" className="section-padding" style={{ position: 'relative' }}>
-      <div className="container grid grid-cols-2" style={{ alignItems: 'center' }}>
+      <div className="container grid grid-cols-2" style={{ alignItems: 'center', gap: '4rem' }}>
         <div className="about-image-wrapper animate-fade-in-up">
-          <div className="glass-panel about-image-container">
-            <img 
-              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-              alt="Hidrolik Mühendisliği" 
-              className="about-img"
-            />
+          <div className="glass-panel about-slider-container">
+            <div className="slider-track">
+              {/* İlk set */}
+              {images.map((img, index) => (
+                <div key={`set1-${index}`} className="slide">
+                  <img src={img.src} alt={img.alt} className="about-img" />
+                </div>
+              ))}
+              {/* İkinci set (sonsuzluk için) */}
+              {images.map((img, index) => (
+                <div key={`set2-${index}`} className="slide">
+                  <img src={img.src} alt={img.alt} className="about-img" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         
@@ -32,42 +47,45 @@ export default function About() {
 
       <style jsx>{`
         .about-image-wrapper {
-          position: relative;
+          width: 100%;
+          max-width: 600px;
+          margin-left: auto;
         }
-        .about-image-container {
-          padding: 1rem;
+        .about-slider-container {
+          padding: 0;
           position: relative;
+          overflow: hidden;
+          width: 100%;
+          aspect-ratio: 4 / 3;
+          border-radius: 24px;
+          border: 1px solid var(--glass-border);
+          box-shadow: var(--glass-shadow);
+        }
+        .slider-track {
+          display: flex;
+          width: 600%; /* 6 görsel olduğu için (Her biri %100 kapsar track'in altındaki slide'a göre) */
+          animation: scrollLeft 15s linear infinite;
+        }
+        .slide {
+          width: calc(100% / 6);
+          aspect-ratio: 4 / 3;
         }
         .about-img {
           width: 100%;
-          border-radius: 8px;
-          display: block;
+          height: 100%;
           object-fit: cover;
-          height: 400px;
+          display: block;
         }
-        .experience-badge {
-          position: absolute;
-          bottom: -20px;
-          right: -20px;
-          padding: 1.5rem;
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          background: rgba(0, 229, 255, 0.1);
-          border-color: rgba(0, 229, 255, 0.3);
+
+        @keyframes scrollLeft {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
-        .experience-badge .years {
-          font-size: 3rem;
-          font-family: 'Outfit', sans-serif;
-          font-weight: 800;
-          color: var(--primary-color);
-          line-height: 1;
+
+        .about-slider-container:hover .slider-track {
+          animation-play-state: paused;
         }
-        .experience-badge .text {
-          font-weight: 500;
-          text-transform: uppercase;
-          line-height: 1.2;
-        }
+
         .feature-list {
           list-style: none;
         }
@@ -90,13 +108,19 @@ export default function About() {
           font-size: 0.8rem;
           font-weight: bold;
         }
+
         @media (max-width: 968px) {
-          .experience-badge {
-            bottom: -10px;
-            right: 10px;
+          .grid-cols-2 {
+            grid-template-columns: 1fr;
+          }
+          .about-image-wrapper {
+            margin: 0 auto;
           }
           .about-content {
-            margin-top: 3rem;
+            text-align: center;
+          }
+          .feature-list li {
+            justify-content: center;
           }
         }
       `}</style>

@@ -16,9 +16,9 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <div className="logo cursor-pointer">
-          <Link href="/" style={{ display: 'inline-block', backgroundColor: 'white', padding: '8px 16px', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.2)' }}>
-            <img src="/logo.png" alt="GNC Hidrolik Logo" style={{ height: '65px', width: 'auto', display: 'block' }} />
+        <div className="logo-container">
+          <Link href="/">
+            <img src="/logo.png" alt="GNC Hidrolik Logo" className="logo-img" />
           </Link>
         </div>
         <div className="nav-links">
@@ -28,7 +28,7 @@ export default function Navbar() {
         </div>
         <div className="nav-action">
           <Link href="#iletisim">
-            <button className="primary-btn" style={{padding: '10px 24px', fontSize: '0.9rem'}}>Teklif Al</button>
+            <button className="primary-btn" style={{ padding: '10px 24px', fontSize: '0.9rem' }}>Teklif Al</button>
           </Link>
         </div>
       </div>
@@ -58,15 +58,23 @@ export default function Navbar() {
           justify-content: space-between;
           align-items: center;
         }
-        .logo {
+        .logo-container {
           display: flex;
-          flex-direction: column;
-          line-height: 1.1;
+          align-items: center;
+          background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+          padding: 10px;
+          border-radius: 50%;
         }
-        .font-bold { font-weight: 800; }
-        .text-2xl { font-size: 1.8rem; }
-        .text-sm { font-size: 0.7rem; }
-        .tracking-widest { letter-spacing: 0.1em; }
+        .logo-img {
+          height: 80px;
+          width: auto;
+          filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+          transition: all 0.3s ease;
+        }
+        .logo-img:hover {
+          filter: drop-shadow(0 0 1px rgba(255, 255, 255, 1)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
+          transform: scale(1.05);
+        }
         .nav-links {
           display: flex;
           gap: 2rem;
@@ -96,6 +104,7 @@ export default function Navbar() {
         @media (max-width: 768px) {
           .nav-links { display: none; }
           .nav-action { display: none; }
+          .logo-img { height: 60px; }
         }
       `}</style>
     </nav>

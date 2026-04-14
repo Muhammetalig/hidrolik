@@ -5,15 +5,23 @@ export default function Footer() {
     <footer className="footer section-padding pb-0" style={{ backgroundColor: 'rgba(6, 11, 20, 0.9)', borderTop: '1px solid var(--glass-border)', paddingBottom: 0 }}>
       <div className="container grid grid-cols-3" style={{ marginBottom: '3rem' }}>
         <div className="footer-col">
-          <div className="logo mb-4" style={{ display: 'inline-block', backgroundColor: 'white', padding: '12px 20px', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
-            <img src="/logo.png" alt="GNC Hidrolik Logo" style={{ height: '75px', width: 'auto', display: 'block' }} />
+          <div className="logo-container mb-4" style={{ display: 'inline-block', background: 'radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%)', padding: '10px', borderRadius: '50%' }}>
+            <img 
+              src="/logo.png" 
+              alt="GNC Hidrolik Logo" 
+              style={{ 
+                height: '90px', 
+                width: 'auto', 
+                filter: 'drop-shadow(0 0 1px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))'
+              }} 
+            />
           </div>
           <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: '1.8' }}>
-            GNC HİDROLİK PNÖMATİK OTOMASYON SİS. SAN. TİC. LTD. ŞTİ. <br/>
+            GNC HİDROLİK PNÖMATİK OTOMASYON SİS. SAN. TİC. LTD. ŞTİ. <br />
             Yüksek teknoloji, kaliteli üretim ve müşteri memnuniyeti.
           </p>
         </div>
-        
+
         <div className="footer-col" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <h4 style={{ fontSize: '1.2rem', marginBottom: '1.5rem', fontFamily: 'Outfit' }}>Hızlı Bağlantılar</h4>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
@@ -23,7 +31,7 @@ export default function Footer() {
             <li><a href="#iletisim" style={{ color: 'var(--text-secondary)' }}>İletişim</a></li>
           </ul>
         </div>
-        
+
         <div className="footer-col" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', textAlign: 'right' }}>
           <h4 style={{ fontSize: '1.2rem', marginBottom: '1.5rem', fontFamily: 'Outfit' }}>Çalışma Saatleri</h4>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.8rem', color: 'var(--text-secondary)' }}>
@@ -34,35 +42,14 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      
+
       <div className="footer-bottom">
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', padding: '1.5rem 2rem', borderTop: '1px solid rgba(255,255,255,0.05)', color: 'var(--text-secondary)', fontSize: '0.9rem', flexWrap: 'wrap', gap: '1rem' }}>
+        <div className="container" style={{ display: 'flex', justifyContent: 'center', padding: '1.5rem 2rem', borderTop: '1px solid rgba(255,255,255,0.05)', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
           <p>&copy; {new Date().getFullYear()} GNC Hidrolik Pnömatik Otomasyon. Tüm Hakları Saklıdır.</p>
         </div>
       </div>
 
       <style jsx>{`
-        .social-links {
-          display: flex;
-          gap: 1rem;
-        }
-        .social-links a {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 40px;
-          height: 40px;
-          background: rgba(255,255,255,0.05);
-          border-radius: 50%;
-          color: var(--text-primary);
-          border: 1px solid rgba(255,255,255,0.1);
-        }
-        .social-links a:hover {
-          background: var(--primary-color);
-          border-color: var(--primary-color);
-          color: var(--bg-main);
-          transform: translateY(-3px);
-        }
         .footer-col a:hover {
           color: var(--primary-color) !important;
         }
@@ -70,6 +57,7 @@ export default function Footer() {
           .footer-col {
             align-items: flex-start !important;
             text-align: left !important;
+            margin-bottom: 2rem;
           }
         }
       `}</style>
