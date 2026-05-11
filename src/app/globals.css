@@ -212,3 +212,36 @@ a {
   flex-direction: column;
   min-height: 100vh;
 }
+
+.business-card-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(0, 229, 255, 0.14), transparent 34rem),
+    var(--bg-main);
+}
+
+.business-card-wrap {
+  width: min(100%, 980px);
+}
+
+.business-card-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 640px) {
+  .business-card-page {
+    padding: 12px;
+  }
+
+  .business-card-image {
+    border-radius: 8px;
+  }
+}
