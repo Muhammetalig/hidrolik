@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="footer section-padding pb-0" style={{ backgroundColor: 'rgba(6, 11, 20, 0.9)', borderTop: '1px solid var(--glass-border)', paddingBottom: 0 }}>
+    <footer className="footer section-padding pb-0" style={{ paddingBottom: 0 }}>
       <div className="container grid grid-cols-3" style={{ marginBottom: '3rem' }}>
         <div className="footer-col">
           <div className="logo-container mb-4" style={{ display: 'inline-block' }}>
@@ -12,7 +12,9 @@ export default function Footer() {
               style={{ 
                 height: '90px', 
                 width: 'auto',
-                borderRadius: '8px'
+                borderRadius: '12px',
+                background: '#fff',
+                padding: '8px 12px'
               }} 
             />
           </div>
@@ -50,8 +52,25 @@ export default function Footer() {
       </div>
 
       <style jsx>{`
+        .footer {
+          position: relative;
+          overflow: hidden;
+          background:
+            linear-gradient(118deg, rgba(248, 250, 252, 0.08) 0 28%, transparent 28.2%),
+            linear-gradient(135deg, rgba(6, 26, 59, 0.98), rgba(3, 8, 23, 1));
+          border-top: 1px solid var(--glass-border);
+        }
+        .footer::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 6px;
+          background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+        }
         .footer-col a:hover {
-          color: var(--primary-color) !important;
+          color: #fff !important;
         }
         @media (max-width: 968px) {
           .footer-col {

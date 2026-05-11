@@ -43,10 +43,12 @@ export default function Navbar() {
           align-items: center;
           z-index: 100;
           transition: all 0.3s ease;
-          background: transparent;
+          background: rgba(6, 26, 59, 0.48);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
         }
         .navbar.scrolled {
-          background: rgba(6, 11, 20, 0.9);
+          background: rgba(6, 26, 59, 0.94);
           backdrop-filter: blur(10px);
           -webkit-backdrop-filter: blur(10px);
           border-bottom: 1px solid var(--glass-border);
@@ -65,7 +67,10 @@ export default function Navbar() {
         .logo-img {
           height: 80px;
           width: auto;
-          border-radius: 8px;
+          border-radius: 12px;
+          background: #fff;
+          padding: 6px 10px;
+          box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
           transition: all 0.3s ease;
         }
         .logo-img:hover {
@@ -88,11 +93,11 @@ export default function Navbar() {
           left: 0;
           width: 0;
           height: 2px;
-          background: var(--primary-color);
+          background: var(--accent-color);
           transition: width 0.3s ease;
         }
         .nav-links a:hover {
-          color: var(--primary-color);
+          color: #fff;
         }
         .nav-links a:hover::after {
           width: 100%;
@@ -100,7 +105,10 @@ export default function Navbar() {
         @media (max-width: 768px) {
           .nav-links { display: none; }
           .nav-action { display: none; }
-          .logo-img { height: 60px; }
+          .logo-img {
+            height: 60px;
+            padding: 5px 8px;
+          }
         }
       `}</style>
     </nav>

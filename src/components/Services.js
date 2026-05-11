@@ -35,7 +35,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="hizmetler" className="section-padding" style={{ backgroundColor: 'var(--bg-card)', paddingBottom: 0 }}>
+    <section id="hizmetler" className="section-padding services-section" style={{ paddingBottom: 0 }}>
       <div className="container">
         <h2 className="section-title animate-fade-in-up">Çözüm ve Hizmetlerimiz</h2>
         <p className="section-subtitle animate-fade-in-up delay-1">
@@ -73,24 +73,47 @@ export default function Services() {
       </div>
 
       <style jsx>{`
+        .services-section {
+          background:
+            linear-gradient(116deg, rgba(248, 250, 252, 0.96) 0 44%, rgba(248, 250, 252, 0) 44.2%),
+            linear-gradient(180deg, rgba(6, 26, 59, 0.86), rgba(7, 20, 47, 0.96));
+          color: var(--secondary-color);
+        }
+        .services-section :global(.section-subtitle) {
+          color: #55677F;
+        }
         .service-card {
           padding: 2.5rem 2rem;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
           transition: transform 0.3s ease, border-color 0.3s ease;
+          background: rgba(255, 255, 255, 0.92);
+          border-color: rgba(11, 61, 120, 0.14);
+          color: var(--secondary-color);
+          position: relative;
+          overflow: hidden;
+        }
+        .service-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 5px;
+          background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
         }
         .service-icon {
           font-size: 3rem;
           margin-bottom: 1.5rem;
-          background: rgba(0, 229, 255, 0.1);
+          background: rgba(11, 61, 120, 0.08);
           width: 80px;
           height: 80px;
           display: flex;
           align-items: center;
           justify-content: center;
           border-radius: 20px;
-          border: 1px solid rgba(0, 229, 255, 0.2);
+          border: 1px solid rgba(11, 61, 120, 0.16);
         }
         .service-card h3 {
           font-size: 1.4rem;
@@ -98,7 +121,7 @@ export default function Services() {
           font-weight: 600;
         }
         .service-card p {
-          color: var(--text-secondary);
+          color: #53677E;
           margin-bottom: 1.5rem;
           flex-grow: 1;
         }
@@ -131,20 +154,27 @@ export default function Services() {
           background-attachment: scroll;
           overflow: hidden;
         }
+        .services-showcase::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(112deg, rgba(248, 250, 252, 0.9) 0 36%, transparent 36.2%);
+          z-index: 1;
+        }
         .showcase-overlay {
           position: absolute;
           inset: 0;
           background: linear-gradient(
             135deg,
-            rgba(6, 11, 20, 0.88) 0%,
-            rgba(6, 11, 20, 0.65) 50%,
-            rgba(6, 11, 20, 0.88) 100%
+            rgba(6, 26, 59, 0.9) 0%,
+            rgba(6, 26, 59, 0.58) 50%,
+            rgba(3, 8, 23, 0.92) 100%
           );
-          z-index: 1;
+          z-index: 2;
         }
         .showcase-content {
           position: relative;
-          z-index: 2;
+          z-index: 3;
           height: 100%;
           display: flex;
           align-items: center;
@@ -155,8 +185,8 @@ export default function Services() {
           align-items: center;
           gap: 3rem;
           padding: 2rem 4rem;
-          background: rgba(255, 255, 255, 0.04);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: rgba(255, 255, 255, 0.92);
+          border: 1px solid rgba(255, 255, 255, 0.18);
           border-radius: 20px;
           backdrop-filter: blur(10px);
           -webkit-backdrop-filter: blur(10px);
@@ -173,7 +203,7 @@ export default function Services() {
           margin-bottom: 0.4rem;
         }
         .showcase-stat p {
-          color: var(--text-secondary);
+          color: #53677E;
           font-size: 0.95rem;
           text-transform: uppercase;
           letter-spacing: 0.05em;
@@ -182,7 +212,7 @@ export default function Services() {
         .showcase-divider {
           width: 1px;
           height: 50px;
-          background: rgba(255, 255, 255, 0.12);
+          background: rgba(11, 61, 120, 0.18);
         }
         @media (max-width: 968px) {
           .services-showcase {

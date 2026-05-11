@@ -1,4 +1,5 @@
 import './globals.css';
+import SiteLoader from '../components/SiteLoader';
 
 export const metadata = {
   title: 'GNC Hidrolik | Pnömatik ve Otomasyon Sistemleri',
@@ -9,6 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <body>
+        <SiteLoader />
         <main className="main-wrapper">
           {children}
         </main>

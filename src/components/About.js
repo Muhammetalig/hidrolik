@@ -8,7 +8,7 @@ export default function About() {
   ];
 
   return (
-    <section id="hakkimizda" className="section-padding" style={{ position: 'relative' }}>
+    <section id="hakkimizda" className="section-padding about-section" style={{ position: 'relative' }}>
       <div className="container grid grid-cols-2" style={{ alignItems: 'center', gap: '4rem' }}>
         <div className="about-image-wrapper animate-fade-in-up">
           <div className="glass-panel about-slider-container">
@@ -30,7 +30,7 @@ export default function About() {
         </div>
         
         <div className="about-content animate-fade-in-up delay-2">
-          <h4 className="gradient-text" style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, marginBottom: '1rem' }}>HAKKIMIZDA</h4>
+          <h4 className="section-kicker" style={{ marginBottom: '1rem' }}>HAKKIMIZDA</h4>
           <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1.5rem' }}>İleri Teknoloji, Kusursuz Basınç</h2>
           <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>
             Ağır sanayi, iş makinaları, otomotiv, denizcilik ve daha birçok sektöre yüksek standartlarda hidrolik sistemler üretiyor ve tasarlıyoruz. Modern tesisimizde, en son teknolojiyi kullanarak projelerinize özel çözümler sunuyoruz.
@@ -46,6 +46,11 @@ export default function About() {
       </div>
 
       <style jsx>{`
+        .about-section {
+          background:
+            linear-gradient(118deg, rgba(248, 250, 252, 0.06) 0 36%, transparent 36.2%),
+            linear-gradient(180deg, rgba(7, 20, 47, 0), rgba(3, 8, 23, 0.26));
+        }
         .about-image-wrapper {
           width: 100%;
           max-width: 600px;
@@ -58,8 +63,19 @@ export default function About() {
           width: 100%;
           aspect-ratio: 4 / 3;
           border-radius: 24px;
-          border: 1px solid var(--glass-border);
-          box-shadow: var(--glass-shadow);
+          border: 10px solid rgba(248, 250, 252, 0.92);
+          box-shadow: 0 26px 70px rgba(0, 0, 0, 0.36);
+        }
+        .about-slider-container::after {
+          content: '';
+          position: absolute;
+          top: 18px;
+          left: 18px;
+          width: 88px;
+          height: 6px;
+          background: var(--accent-color);
+          border-radius: 999px;
+          z-index: 2;
         }
         .slider-track {
           display: flex;
@@ -102,8 +118,8 @@ export default function About() {
           justify-content: center;
           width: 24px;
           height: 24px;
-          background: var(--primary-color);
-          color: var(--bg-main);
+          background: var(--accent-color);
+          color: #fff;
           border-radius: 50%;
           font-size: 0.8rem;
           font-weight: bold;

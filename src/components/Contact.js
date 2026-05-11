@@ -2,10 +2,10 @@
 
 export default function Contact() {
   return (
-    <section id="iletisim" className="section-padding" style={{ position: 'relative' }}>
+    <section id="iletisim" className="section-padding contact-section" style={{ position: 'relative' }}>
       <div className="container grid grid-cols-2">
         <div className="contact-info animate-fade-in-up">
-          <h4 className="gradient-text" style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, marginBottom: '1rem' }}>BİZE ULAŞIN</h4>
+          <h4 className="section-kicker" style={{ marginBottom: '1rem' }}>BİZE ULAŞIN</h4>
           <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1.5rem' }}>Projeleriniz İçin Yanınızdayız</h2>
           <p style={{ color: 'var(--text-secondary)', marginBottom: '3rem', fontSize: '1.1rem' }}>
             Sorularınız, teknik destek talepleriniz veya teklif almak için bizimle iletişime geçebilirsiniz. Uzman mühendis kadromuz size yardımcı olmaktan memnuniyet duyacaktır.
@@ -53,6 +53,11 @@ export default function Contact() {
       </div>
 
       <style jsx>{`
+        .contact-section {
+          background:
+            linear-gradient(116deg, rgba(248, 250, 252, 0.06) 0 36%, transparent 36.2%),
+            radial-gradient(circle at top right, rgba(11, 61, 120, 0.28), transparent 30rem);
+        }
         .info-cards {
           display: flex;
           flex-direction: column;
@@ -63,16 +68,20 @@ export default function Contact() {
           align-items: center;
           gap: 1.5rem;
           padding: 1.5rem;
+          background: rgba(255, 255, 255, 0.92);
+          color: var(--secondary-color);
+          border-color: rgba(11, 61, 120, 0.14);
         }
         .info-card .icon {
           font-size: 2rem;
-          background: rgba(0, 229, 255, 0.1);
+          background: rgba(217, 35, 50, 0.1);
           width: 60px;
           height: 60px;
           display: flex;
           align-items: center;
           justify-content: center;
           border-radius: 50%;
+          color: var(--accent-color);
         }
         .info-card h4 {
           font-family: 'Outfit', sans-serif;
@@ -81,8 +90,24 @@ export default function Contact() {
           color: var(--primary-color);
         }
         .info-card p {
-          color: var(--text-secondary);
+          color: #53677E;
           font-size: 0.95rem;
+        }
+        .contact-whatsapp {
+          background:
+            linear-gradient(135deg, rgba(6, 26, 59, 0.96), rgba(3, 8, 23, 0.96));
+          border-color: rgba(255, 255, 255, 0.16);
+          position: relative;
+          overflow: hidden;
+        }
+        .contact-whatsapp::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 6px;
+          background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
         }
         .contact-form {
           padding: 3rem;
